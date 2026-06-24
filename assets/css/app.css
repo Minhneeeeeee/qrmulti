@@ -163,3 +163,22 @@ a { color: inherit; }
   .preview-stage { min-height: 330px; padding: 15px; }
   .action-row { grid-template-columns: 1fr; }
 }
+
+/* Product navigation added in QRcode 1 v2. */
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.product-nav { display: flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.76); }
+.product-link { text-decoration: none; color: var(--muted); border-radius: 8px; padding: 8px 11px; font-size: 13px; font-weight: 800; white-space: nowrap; }
+.product-link:hover { color: var(--ink); }
+.product-link.active { background: #eef2ff; color: #3730a3; }
+@media (max-width: 1050px) { .product-nav { display: none; } }
+.color-wrap input[type="text"] {
+  min-width: 0;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: var(--ink);
+  outline: none;
+  padding: 10px 11px;
+}
+.color-wrap input[type="text"]:focus { border-color: #60a5fa; box-shadow: 0 0 0 4px rgba(37,99,235,.10); }

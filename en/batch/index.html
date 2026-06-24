@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bulk QR Code Generator for Excel, WPS & CSV | QR Multi</title>
+  <meta name="description" content="Generate up to 2,000 QR codes from Excel, WPS or CSV, name images from a column, add labels and download one ZIP. Files stay on your device.">
+  <meta name="theme-color" content="#111827">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://qrmulti.com/en/batch/">
+  <link rel="alternate" hreflang="vi" href="https://qrmulti.com/vi/batch/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://qrmulti.com/zh-cn/batch/">
+  <link rel="alternate" hreflang="en" href="https://qrmulti.com/en/batch/">
+  <link rel="alternate" hreflang="x-default" href="https://qrmulti.com/en/batch/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QR Multi">
+  <meta property="og:title" content="Bulk QR Code Generator for Excel, WPS & CSV | QR Multi">
+  <meta property="og:description" content="Generate up to 2,000 QR codes from Excel, WPS or CSV, name images from a column, add labels and download one ZIP. Files stay on your device.">
+  <meta property="og:url" content="https://qrmulti.com/en/batch/">
+  <meta property="og:image" content="https://qrmulti.com/assets/icons/logo.svg">
+  <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="stylesheet" href="../../assets/css/batch.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"QR Multi Batch QR Generator","url":"https://qrmulti.com/en/batch/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"inLanguage":"en","description":"Generate up to 2,000 QR codes from Excel, WPS or CSV, name images from a column, add labels and download one ZIP. Files stay on your device."}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../" aria-label="QR Multi">
+        <img src="../../assets/icons/logo.svg" alt="">
+        <span class="brand-copy">QR Multi<small data-i18n="brandTag"></small></span>
+      </a>
+      <div class="header-actions">
+        <nav class="product-nav" aria-label="QR tools">
+          <a class="product-link" href="../">Single QR</a>
+          <a class="product-link active" href="./">Batch QR</a>
+        </nav>
+        <nav class="language-switcher" aria-label="Language">
+          <button class="lang-btn" data-lang="vi" data-href="/vi/batch/" aria-current="false">VI</button>
+          <button class="lang-btn" data-lang="zh-cn" data-href="/zh-cn/batch/" aria-current="false">中文</button>
+          <button class="lang-btn" data-lang="en" data-href="/en/batch/" aria-current="true">EN</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero batch-hero shell">
+      <p class="eyebrow" data-i18n="batchEyebrow"></p>
+      <h1 data-i18n="batchHeroTitle"></h1>
+      <p data-i18n="batchHeroDesc"></p>
+      <div class="trust-row">
+        <span class="trust-pill"><i class="dot"></i><span data-i18n="batchLocal"></span></span>
+        <span class="trust-pill"><i class="dot"></i><span data-i18n="batchLimit"></span></span>
+        <span class="trust-pill"><i class="dot"></i><span data-i18n="batchZip"></span></span>
+      </div>
+    </section>
+
+    <section class="shell batch-layout" aria-label="Batch QR generator">
+      <div class="workflow-stack">
+        <article class="step-card">
+          <div class="step-head"><span class="step-number">1</span><div class="step-copy"><h2 data-i18n="stepUploadTitle"></h2><p data-i18n="stepUploadDesc"></p></div></div>
+          <div class="step-body">
+            <div class="drop-zone" id="dropZone">
+              <div class="drop-icon">⇧</div>
+              <strong data-i18n="dropTitle"></strong>
+              <p data-i18n="dropDesc"></p>
+              <button class="btn btn-primary" id="chooseFile" type="button" data-i18n="chooseFile"></button>
+              <input class="hidden-file" id="batchFile" type="file" accept=".xlsx,.xls,.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv">
+            </div>
+            <div class="file-summary" id="fileSummary">
+              <div><strong id="fileNameDisplay"></strong><small id="fileMeta"></small></div>
+              <button class="btn btn-ghost" id="replaceFile" type="button" data-i18n="replaceFile"></button>
+            </div>
+            <div class="mapping-grid" style="margin-top:16px">
+              <div class="field"><label for="sheetSelect" data-i18n="sheet"></label><select id="sheetSelect" disabled></select></div>
+              <div class="field"><label for="headerRow" data-i18n="headerRow"></label><input id="headerRow" type="number" min="1" value="1" disabled><div class="field-note" data-i18n="headerRowNote"></div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-head"><span class="step-number">2</span><div class="step-copy"><h2 data-i18n="stepMapTitle"></h2><p data-i18n="stepMapDesc"></p></div></div>
+          <div class="step-body">
+            <div class="mapping-grid">
+              <div class="field"><label for="contentColumn" data-i18n="contentColumn"></label><select id="contentColumn" disabled></select></div>
+              <div class="field"><label for="filenameColumn" data-i18n="filenameColumn"></label><select id="filenameColumn" disabled></select></div>
+              <div class="field"><label for="labelColumn1" data-i18n="labelColumn1"></label><select id="labelColumn1" disabled></select></div>
+              <div class="field"><label for="labelColumn2" data-i18n="labelColumn2"></label><select id="labelColumn2" disabled></select></div>
+            </div>
+            <div class="data-stats">
+              <div class="stat-card"><span data-i18n="totalRows"></span><strong id="totalRows">0</strong></div>
+              <div class="stat-card"><span data-i18n="validRows"></span><strong id="validRows">0</strong></div>
+              <div class="stat-card"><span data-i18n="skippedRows"></span><strong id="skippedRows">0</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-head"><span class="step-number">3</span><div class="step-copy"><h2 data-i18n="stepStyleTitle"></h2><p data-i18n="stepStyleDesc"></p></div></div>
+          <div class="step-body">
+            <div class="controls-title"><h3 data-i18n="customize"></h3><button id="resetBatchStyle" class="reset-btn" type="button" data-i18n="styleReset"></button></div>
+            <div class="batch-style-grid">
+              <div class="control"><label class="control-label" for="batchDotStyle" data-i18n="batchDotStyle"></label><select id="batchDotStyle"><option value="square" data-i18n="square"></option><option value="rounded" data-i18n="rounded" selected></option><option value="dots" data-i18n="dots"></option><option value="classy-rounded" data-i18n="classy"></option><option value="extra-rounded" data-i18n="extraRounded"></option></select></div>
+              <div class="control"><label class="control-label" for="batchCornerStyle" data-i18n="batchCornerStyle"></label><select id="batchCornerStyle"><option value="square" data-i18n="square"></option><option value="rounded" data-i18n="rounded"></option><option value="dot" data-i18n="dots"></option><option value="extra-rounded" data-i18n="extraRounded" selected></option></select><select id="batchCornerDotStyle" aria-label="Inner eye"><option value="square" data-i18n="square"></option><option value="dot" data-i18n="dots" selected></option><option value="rounded" data-i18n="rounded"></option></select></div>
+              <div class="control"><label class="control-label" for="batchErrorCorrection" data-i18n="batchCorrection"></label><select id="batchErrorCorrection"><option value="L">L · 7%</option><option value="M">M · 15%</option><option value="Q" selected>Q · 25%</option><option value="H">H · 30%</option></select></div>
+              <div class="control"><label class="control-label" for="batchQrSize" data-i18n="batchSize"></label><div class="range-line"><input id="batchQrSize" type="range" min="300" max="1200" step="100" value="600"><span class="range-value" data-batch-range-output="batchQrSize" data-suffix="px"></span></div></div>
+              <div class="control"><label class="control-label" for="batchQrMargin" data-i18n="batchMargin"></label><div class="range-line"><input id="batchQrMargin" type="range" min="0" max="50" step="2" value="16"><span class="range-value" data-batch-range-output="batchQrMargin" data-suffix="px"></span></div></div>
+              <div class="control"><label class="control-label" for="batchLogoSize" data-i18n="batchLogoSize"></label><div class="range-line"><input id="batchLogoSize" type="range" min="0.15" max="0.42" step="0.01" value="0.28"><span class="range-value" data-batch-range-output="batchLogoSize" data-suffix="%"></span></div></div>
+              <div class="control"><label class="control-label" for="batchQrColor" data-i18n="batchQrColor"></label><div class="color-wrap"><input id="batchQrColor" type="color" value="#111827"><input type="text" value="#111827" aria-label="QR hex" oninput="document.getElementById('batchQrColor').value=this.value;document.getElementById('batchQrColor').dispatchEvent(new Event('input'))"></div></div>
+              <div class="control"><label class="control-label" for="batchBgColor" data-i18n="batchBgColor"></label><div class="color-wrap"><input id="batchBgColor" type="color" value="#ffffff"><input type="text" value="#ffffff" aria-label="Background hex" oninput="document.getElementById('batchBgColor').value=this.value;document.getElementById('batchBgColor').dispatchEvent(new Event('input'))"></div><label class="inline-check"><input id="batchTransparentBg" type="checkbox"><span data-i18n="batchTransparent"></span></label></div>
+              <div class="upload-box">
+                <div class="upload-line"><div><div class="control-label" data-i18n="batchUploadLogo"></div><div class="field-note" data-i18n="batchUploadHint"></div></div><input id="batchLogoFile" class="file-input" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp"></div>
+                <div id="batchLogoName" class="field-note"></div><div class="logo-actions"><button id="batchRemoveLogo" class="btn btn-ghost" type="button" disabled data-i18n="batchRemoveLogo"></button></div>
+              </div>
+            </div>
+            <div class="note-banner" data-i18n="batchLocal"></div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="batch-side">
+        <section class="preview-card">
+          <div class="panel-head"><h2 data-i18n="previewBatchTitle"></h2><p data-i18n="previewBatchDesc"></p></div>
+          <div class="preview-grid" id="previewGrid"></div>
+          <div class="error-box" id="errorBox">
+            <div class="error-head"><span data-i18n="errorTitle"></span><span id="errorCount">0</span></div>
+            <div class="error-list" id="errorList"></div>
+          </div>
+        </section>
+
+        <section class="export-card">
+          <div class="panel-head"><h2 data-i18n="exportTitle"></h2><p data-i18n="exportDesc"></p></div>
+          <div class="export-body">
+            <div class="field"><label for="zipName" data-i18n="zipName"></label><input id="zipName" type="text" value="qr-multi-batch" data-i18n-placeholder="zipNamePlaceholder"></div>
+            <div class="progress-shell" id="progressShell"><div class="progress-bar" id="progressBar"></div></div>
+            <div class="progress-meta" id="progressMeta"><span id="progressText"></span><strong id="progressPercent">0%</strong></div>
+            <p class="export-status" id="exportStatus"></p>
+            <div class="export-actions">
+              <button class="btn btn-primary" id="generateZip" type="button" disabled data-i18n="generateZip"></button>
+              <button class="btn btn-ghost" id="cancelGeneration" type="button" disabled data-i18n="cancel"></button>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="content-section batch-content">
+      <div class="shell">
+        <h2 data-i18n="batchWhyTitle"></h2><p data-i18n="batchWhyDesc"></p>
+        <div class="feature-grid">
+          <article class="feature-card"><b data-i18n="batchF1t"></b><p data-i18n="batchF1d"></p></article>
+          <article class="feature-card"><b data-i18n="batchF2t"></b><p data-i18n="batchF2d"></p></article>
+          <article class="feature-card"><b data-i18n="batchF3t"></b><p data-i18n="batchF3d"></p></article>
+        </div>
+        <h2 style="margin-top:64px" data-i18n="batchFaqTitle"></h2>
+        <div class="faq">
+          <details><summary data-i18n="batchQ1"></summary><p data-i18n="batchA1"></p></details>
+          <details><summary data-i18n="batchQ2"></summary><p data-i18n="batchA2"></p></details>
+          <details><summary data-i18n="batchQ3"></summary><p data-i18n="batchA3"></p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><span data-i18n="footer"></span><span data-i18n="privacy"></span></div></footer>
+  <div class="qr-engine" id="batchQrEngine" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="../../assets/vendor/xlsx-0.18.5.full.min.js"></script>
+  <script src="../../assets/vendor/jszip-3.10.1.min.js"></script>
+  <script src="../../assets/vendor/qr-code-styling-1.9.2.js"></script>
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/batch-i18n.js"></script>
+  <script src="../../assets/js/batch.js"></script>
+</body>
+</html>
