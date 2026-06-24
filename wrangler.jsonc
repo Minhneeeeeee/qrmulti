@@ -2,6 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "qrmulti",
   "compatibility_date": "2026-06-24",
+  "preview_urls": true,
   "observability": {
     "enabled": true
   },
