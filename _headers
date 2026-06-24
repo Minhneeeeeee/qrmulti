@@ -8,4 +8,6 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /sitemap.xml
+  ! Content-Security-Policy
   Content-Type: application/xml; charset=utf-8
+  Cache-Control: no-cache
