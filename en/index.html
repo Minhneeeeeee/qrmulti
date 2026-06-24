@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free QR Code Generator for Text, URL, Wi-Fi & vCard | QR Multi</title>
+  <meta name="description" content="Create free QR codes for text, links, Wi-Fi and contact cards. Customize colors and logos, then download PNG or SVG. Data stays on your device.">
+  <meta name="theme-color" content="#111827">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://qrmulti.com/en/">
+  <link rel="alternate" hreflang="vi" href="https://qrmulti.com/vi/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://qrmulti.com/zh-cn/">
+  <link rel="alternate" hreflang="en" href="https://qrmulti.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://qrmulti.com/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QR Multi">
+  <meta property="og:title" content="Free QR Code Generator for Text, URL, Wi-Fi & vCard | QR Multi">
+  <meta property="og:description" content="Create free QR codes for text, links, Wi-Fi and contact cards. Customize colors and logos, then download PNG or SVG. Data stays on your device.">
+  <meta property="og:url" content="https://qrmulti.com/en/">
+  <meta property="og:image" content="https://qrmulti.com/assets/icons/logo.svg">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"QR Multi","url":"https://qrmulti.com/en/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"inLanguage":"en","description":"Create free QR codes for text, links, Wi-Fi and contact cards. Customize colors and logos, then download PNG or SVG. Data stays on your device."}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="QR Multi">
+        <img src="../assets/icons/logo.svg" alt="">
+        <span class="brand-copy">QR Multi<small data-i18n="brandTag"></small></span>
+      </a>
+      <nav class="language-switcher" aria-label="Language">
+        <button class="lang-btn" data-lang="vi" data-href="/vi/" aria-current="false">VI</button>
+        <button class="lang-btn" data-lang="zh-cn" data-href="/zh-cn/" aria-current="false">中文</button>
+        <button class="lang-btn" data-lang="en" data-href="/en/" aria-current="true">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <p class="eyebrow" data-i18n="eyebrow"></p>
+      <h1 data-i18n="heroTitle"></h1>
+      <p data-i18n="heroDesc"></p>
+      <div class="trust-row">
+        <span class="trust-pill"><i class="dot"></i><span data-i18n="local"></span></span>
+        <span class="trust-pill"><i class="dot"></i><span data-i18n="noAccount"></span></span>
+        <span class="trust-pill"><i class="dot"></i><span data-i18n="pngSvg"></span></span>
+      </div>
+    </section>
+
+    <section class="shell app-grid" aria-label="QR generator">
+      <article class="panel">
+        <div class="panel-head"><h2 data-i18n="inputTitle"></h2><p data-i18n="inputDesc"></p></div>
+        <div class="type-tabs" role="tablist">
+          <button class="type-btn active" data-type="text" role="tab" aria-selected="true" data-i18n="text"></button>
+          <button class="type-btn" data-type="url" role="tab" aria-selected="false" data-i18n="url"></button>
+          <button class="type-btn" data-type="wifi" role="tab" aria-selected="false" data-i18n="wifi"></button>
+          <button class="type-btn" data-type="vcard" role="tab" aria-selected="false" data-i18n="vcard"></button>
+        </div>
+        <div class="form-area">
+          <div class="type-form" data-form="text">
+            <div class="field"><label for="textContent" data-i18n="textLabel"></label><textarea id="textContent" maxlength="2900" data-i18n-placeholder="textPlaceholder">QR Multi · qrmulti.com</textarea><div class="field-note" id="charCount"></div></div>
+          </div>
+          <div class="type-form" data-form="url" hidden>
+            <div class="field"><label for="urlContent" data-i18n="urlLabel"></label><input id="urlContent" type="text" inputmode="url" value="https://qrmulti.com" data-i18n-placeholder="urlPlaceholder"><div class="field-note" data-i18n="urlNote"></div></div>
+          </div>
+          <div class="type-form" data-form="wifi" hidden>
+            <div class="field-grid">
+              <div class="field full"><label for="wifiSsid" data-i18n="ssid"></label><input id="wifiSsid" type="text" autocomplete="off" placeholder="My Wi-Fi"></div>
+              <div class="field"><label for="wifiPassword" data-i18n="password"></label><input id="wifiPassword" type="text" autocomplete="off"></div>
+              <div class="field"><label for="wifiSecurity" data-i18n="encryption"></label><select id="wifiSecurity"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">None</option></select></div>
+              <label class="inline-check"><input id="wifiHidden" type="checkbox"><span data-i18n="hidden"></span></label>
+            </div>
+          </div>
+          <div class="type-form" data-form="vcard" hidden>
+            <div class="field-grid">
+              <div class="field full"><label for="vcName" data-i18n="name"></label><input id="vcName" type="text" autocomplete="name"></div>
+              <div class="field"><label for="vcCompany" data-i18n="company"></label><input id="vcCompany" type="text" autocomplete="organization"></div>
+              <div class="field"><label for="vcPhone" data-i18n="phone"></label><input id="vcPhone" type="tel" autocomplete="tel"></div>
+              <div class="field"><label for="vcEmail" data-i18n="email"></label><input id="vcEmail" type="email" autocomplete="email"></div>
+              <div class="field"><label for="vcWebsite" data-i18n="website"></label><input id="vcWebsite" type="url" autocomplete="url"></div>
+              <div class="field full"><label for="vcAddress" data-i18n="address"></label><input id="vcAddress" type="text" autocomplete="street-address"></div>
+            </div>
+          </div>
+          <div class="field" style="margin-top:8px"><label for="fileName" data-i18n="fileName"></label><input id="fileName" type="text" value="qr-multi" data-i18n-placeholder="fileNamePlaceholder"></div>
+        </div>
+      </article>
+
+      <aside class="panel preview-panel">
+        <div class="panel-head"><h2 data-i18n="previewTitle"></h2><p data-i18n="previewDesc"></p></div>
+        <div class="preview-wrap">
+          <div class="preview-stage"><div id="qrCanvas" aria-live="polite"></div></div>
+          <div class="status-line"><span id="qrStatus" class="status-ok"></span><span>qrmulti.com</span></div>
+          <div class="action-row">
+            <button class="btn btn-primary" id="downloadPng" data-i18n="downloadPng"></button>
+            <button class="btn btn-secondary" id="downloadSvg" data-i18n="downloadSvg"></button>
+            <button class="btn btn-ghost" id="copyPng" style="grid-column:1/-1" data-i18n="copyPng"></button>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="controls-title"><h3 data-i18n="customize"></h3><button id="resetSettings" class="reset-btn" data-i18n="reset"></button></div>
+          <div class="control-grid">
+            <div class="control"><label class="control-label" for="dotStyle" data-i18n="dotStyle"></label><select id="dotStyle"><option value="square" data-i18n="square"></option><option value="rounded" data-i18n="rounded" selected></option><option value="dots" data-i18n="dots"></option><option value="classy-rounded" data-i18n="classy"></option><option value="extra-rounded" data-i18n="extraRounded"></option></select></div>
+            <div class="control"><label class="control-label" for="cornerStyle" data-i18n="cornerStyle"></label><select id="cornerStyle"><option value="square" data-i18n="square"></option><option value="rounded" data-i18n="rounded"></option><option value="dot" data-i18n="dots"></option><option value="extra-rounded" data-i18n="extraRounded" selected></option></select><select id="cornerDotStyle" aria-label="Inner eye"><option value="square" data-i18n="square"></option><option value="dot" data-i18n="dots" selected></option><option value="rounded" data-i18n="rounded"></option></select></div>
+            <div class="control"><label class="control-label" for="errorCorrection" data-i18n="correction"></label><select id="errorCorrection"><option value="L">L · 7%</option><option value="M">M · 15%</option><option value="Q" selected>Q · 25%</option><option value="H">H · 30%</option></select></div>
+            <div class="control"><label class="control-label" for="qrSize" data-i18n="size"></label><div class="range-line"><input id="qrSize" type="range" min="300" max="1200" step="100" value="600"><span class="range-value" data-range-output="qrSize" data-suffix="px"></span></div></div>
+            <div class="control"><label class="control-label" for="qrMargin" data-i18n="margin"></label><div class="range-line"><input id="qrMargin" type="range" min="0" max="50" step="2" value="16"><span class="range-value" data-range-output="qrMargin" data-suffix="px"></span></div></div>
+            <div class="control"><label class="control-label" for="logoSize" data-i18n="logoSize"></label><div class="range-line"><input id="logoSize" type="range" min="0.15" max="0.42" step="0.01" value="0.28"><span class="range-value" data-range-output="logoSize" data-suffix="%"></span></div></div>
+            <div class="control"><label class="control-label" for="qrColor" data-i18n="qrColor"></label><div class="color-wrap"><input id="qrColor" type="color" value="#111827"><input type="text" value="#111827" aria-label="QR hex" oninput="document.getElementById('qrColor').value=this.value;document.getElementById('qrColor').dispatchEvent(new Event('input'))"></div></div>
+            <div class="control"><label class="control-label" for="bgColor" data-i18n="bgColor"></label><div class="color-wrap"><input id="bgColor" type="color" value="#ffffff"><input type="text" value="#ffffff" aria-label="Background hex" oninput="document.getElementById('bgColor').value=this.value;document.getElementById('bgColor').dispatchEvent(new Event('input'))"></div><label class="inline-check"><input id="transparentBg" type="checkbox"><span data-i18n="transparent"></span></label></div>
+            <div class="upload-box">
+              <div class="upload-line"><div><div class="control-label" data-i18n="uploadLogo"></div><div class="field-note" data-i18n="uploadHint"></div></div><input id="logoFile" class="file-input" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp"></div>
+              <div id="logoName" class="field-note"></div><div class="logo-actions"><button id="removeLogo" class="btn btn-ghost" type="button" disabled data-i18n="removeLogo"></button></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content-section">
+      <div class="shell">
+        <h2 data-i18n="whyTitle"></h2><p data-i18n="whyDesc"></p>
+        <div class="feature-grid">
+          <article class="feature-card"><b data-i18n="f1t"></b><p data-i18n="f1d"></p></article>
+          <article class="feature-card"><b data-i18n="f2t"></b><p data-i18n="f2d"></p></article>
+          <article class="feature-card"><b data-i18n="f3t"></b><p data-i18n="f3d"></p></article>
+        </div>
+        <h2 style="margin-top:64px" data-i18n="faqTitle"></h2>
+        <div class="faq">
+          <details><summary data-i18n="q1"></summary><p data-i18n="a1"></p></details>
+          <details><summary data-i18n="q2"></summary><p data-i18n="a2"></p></details>
+          <details><summary data-i18n="q3"></summary><p data-i18n="a3"></p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><span data-i18n="footer"></span><span data-i18n="privacy"></span></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="../assets/vendor/qr-code-styling-1.9.2.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

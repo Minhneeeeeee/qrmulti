@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>QR Multi</title>
+  <rect width="64" height="64" rx="16" fill="#111827"/>
+  <g fill="#fff">
+    <path d="M12 12h17v17H12zm5 5v7h7v-7zM35 12h17v17H35zm5 5v7h7v-7zM12 35h17v17H12zm5 5v7h7v-7z"/>
+    <rect x="35" y="35" width="6" height="6" rx="1"/>
+    <rect x="46" y="35" width="6" height="6" rx="1"/>
+    <rect x="35" y="46" width="6" height="6" rx="1"/>
+    <rect x="43" y="43" width="4" height="4" rx="1"/>
+    <rect x="48" y="48" width="4" height="4" rx="1"/>
+  </g>
+</svg>
